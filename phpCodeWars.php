@@ -5,6 +5,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 */
+
+//6 Kyu
+
 //Given an array, find the int that appears an odd number of times.
 function findIt(array $seq) : int{
     $intArr = array();
@@ -71,6 +74,38 @@ function divisors($integer) {
   }
 }
 
+//8 Kyu
+/*Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+If the input array is empty or null, return an empty array.
+*/
+function countPositivesSumNegatives($input) {
+  if(empty($input)){
+    $empty = array();
+    return $empty;
+  }
+  else{
+    $arr = array(0,0);
+    foreach($input as $element){
+      if($element > 0 ){
+        $arr[0] += 1;
+      }
+      elseif($element <0){
+        $arr[1] += $element;
+      }
+    }
+    return $arr;
+  }
+}
+function summation2($n) {
+  return $n * ($n + 1) / 2;
+}
+function summation($n) {
+  $total = 0;
+  for($i=$n;$i>0;$i--){
+    $total += $i;
+  }
+  return $total;
+}
 //Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 //Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 function toJadenCase($string)
